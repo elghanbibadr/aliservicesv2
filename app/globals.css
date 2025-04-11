@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+@theme{
+  --color-heading:#00023D;
+  --color-text:#4B4B5E;
+  --color-lightBlue:#0123D7
+
+
+
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+h1,li,h2,h3,h6{
+  color: var(--color-heading);
+}
+h2{
+@apply text-[3rem] leading-[34px]  font-medium lg:text-[4.8rem] md:leading-[55px]
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+h3{
+@apply text-[2.5rem] leading-[24px]   font-medium lg:text-[3.8rem] md:leading-[38px]
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+h4{
+@apply text-[1.6rem] leading-[16px] mt-20  font-medium lg:text-[1.8rem] md:leading-[28px]
 }
+
+h5{
+@apply text-[1.4rem] leading-[13px]  font-medium lg:text-[1.6rem] md:leading-[23px]
+}
+
+p {
+  @apply text-[#4B4B5E] text-[1.125rem] leading-[140%] tracking-[0.015em] font-normal 
+         md:text-[1.125rem] 
+         my-4;
+}
+
+h1 {
+  @apply text-[2rem] leading-[100%] font-medium tracking-[0.015em]   
+         md:text-[3rem] md:leading-[100%] md:tracking-[0.015em] 
+         lg:text-[3rem] lg:leading-[100%] lg:tracking-[0.015em]
+         xl:text-[3rem] xl:leading-[100%] xl:tracking-[0.015em] 
+         my-8;
+}
+
+button{
+  @apply rounded-[20px] px-7 py-3
+}
+
+
+
