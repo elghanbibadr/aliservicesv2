@@ -5,7 +5,8 @@
 @theme{
   --color-heading:#00023D;
   --color-text:#4B4B5E;
-  --color-lightBlue:#0123D7
+  --color-lightBlue:#0123D7;
+--color-cyan:#D3DFFA
 
 
 
@@ -15,13 +16,18 @@
 h1,li,h2,h3,h6{
   color: var(--color-heading);
 }
-h2{
-@apply text-[3rem] leading-[34px]  font-medium lg:text-[4.8rem] md:leading-[55px]
+h2 {
+  @apply text-[28px] leading-[28px] tracking-[0.48px] font-medium 
+         md:text-[32px] md:leading-[32px] 
+         /* lg:text-[40px] lg:leading-[40px]; */
 }
 
-h3{
-@apply text-[2.5rem] leading-[24px]   font-medium lg:text-[3.8rem] md:leading-[38px]
+h3 {
+  @apply text-[18px] leading-[18px] tracking-[0.27px] font-medium
+         md:text-[20px] md:leading-[20px] md:tracking-[0.3px] 
+         align-middle;
 }
+
 
 h4{
 @apply text-[1.6rem] leading-[16px] mt-20  font-medium lg:text-[1.8rem] md:leading-[28px]
@@ -49,5 +55,11 @@ button{
   @apply rounded-[20px] px-7 py-3
 }
 
+.btn-transparent{
+ @apply bg-transparent border-[1px] border-lightBlue text-lightBlue
+}
 
-
+.btn-blue{
+  @apply bg-lightBlue text-white
+ }
+ 
