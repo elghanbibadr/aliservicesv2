@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link'; // Use Next.js Link for internal navigation
 import blogPlaceHolder1 from "@/public/blogPlaceholder1.png"
 import blogPlaceHolder2 from "@/public/blogPlaceHolder2.png"
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import {  ArrowRight } from 'lucide-react';
 
 // Define the type for a single blog post
 interface BlogPost {
