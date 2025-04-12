@@ -6,7 +6,8 @@
   --color-heading:#00023D;
   --color-text:#4B4B5E;
   --color-lightBlue:#0123D7;
---color-cyan:#D3DFFA
+--color-cyan:#D3DFFA;
+--color-lightGrey:#F4F4F4;
 
 
 
@@ -42,6 +43,12 @@ p {
          md:text-[1.125rem] 
          my-4;
 }
+
+
+.small-desc{
+  @apply text-[13px] md:text-[14px] text-text my-4 
+}
+
 
 h1 {
   @apply text-[2rem] leading-[100%] font-medium tracking-[0.015em]   

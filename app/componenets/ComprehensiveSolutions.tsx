@@ -65,7 +65,7 @@ const ComprehensiveSolutions = () => {
               </h3>
 
               {/* Description */}
-              <span className="text-[13px] md:text-[14px] text-text my-4">
+              <span className="small-desc">
                 {solution.description}
               </span>
 
