@@ -8,6 +8,7 @@ import Faqs from "./componenets/Faqs";
 import Newsletter from "./componenets/NewsLetter";
 import Footer from "./componenets/ui/Footer";
 
+
 export default function Home() {
   return (
     <>

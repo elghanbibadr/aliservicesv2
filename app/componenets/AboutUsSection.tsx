@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import aboutUsBg from '@/public/aboutUsBg.png'
 import Container from './ui/Container';
+import { CircleCheck } from 'lucide-react';
 
 const AboutUsSection = () => {
 
@@ -24,19 +25,19 @@ const AboutUsSection = () => {
             </p>
             <ul className="space-y-4 mb-10">
               <li className="flex items-start">
-                <CheckIcon className="flex-shrink-0 h-6 w-6 text-blue-600 mr-3 mt-1" />
+                <CircleCheck  className="flex-shrink-0  h-6 w-6 text-blue-600 mr-3 mt-1" />
                 <span className="text-gray-700">
                   <strong className="font-medium text-gray-900">Expert-Led Strategies</strong> - Our experienced consultants bring deep industry insights.
                 </span>
               </li>
               <li className="flex items-start">
-                <CheckIcon className="flex-shrink-0 h-6 w-6 text-blue-600 mr-3 mt-1" />
+                <CircleCheck className="flex-shrink-0 h-6 w-6 text-blue-600 mr-3 mt-1" />
                 <span className="text-gray-700">
                   <strong className="font-medium text-gray-900">Tailored Solutions</strong> - We craft strategies specific to your business needs.
                 </span>
               </li>
               <li className="flex items-start">
-                <CheckIcon className="flex-shrink-0 h-6 w-6 text-blue-600 mr-3 mt-1" />
+                <CircleCheck className="flex-shrink-0 h-6 w-6 text-blue-600 mr-3 mt-1" />
                 <span className="text-gray-700">
                   <strong className="font-medium text-gray-900">Proven Success</strong> - Track record of helping businesses grow and scale.
                 </span>
@@ -61,18 +62,5 @@ const AboutUsSection = () => {
   );
 };
 
-// Simple Check Icon Component (or use a library like heroicons)
-const CheckIcon = (props) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth={2.5} // Made slightly thicker
-    stroke="currentColor"
-    {...props} // Pass className, etc.
-  >
-    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-  </svg>
-);
 
 export default AboutUsSection;
