@@ -2,9 +2,12 @@ import React from "react";
 import Container from "../componenets/ui/Container";
 import ourMission from "@/public/ourMission.svg";
 import Image from "next/image";
+import ContactForm from "../componenets/ContactForm";
 
 const AboutUsPage = () => {
   return (
+    <>
+    
     <Container>
       <div className="text-center my-20">
         <h1>About Us – Alie Services</h1>
@@ -14,7 +17,7 @@ const AboutUsPage = () => {
           challenges, seize opportunities, and achieve long-term success. With a
           strong presence in the U.S. and Canada, our consulting expertise spans
           strategic planning, marketing solutions, and operational efficiency.
-          Whether you're a startup, a small business, or an established
+          Whether you re a startup, a small business, or an established
           enterprise, we provide the tools and insights needed to scale
           efficiently and confidently.
         </p>
@@ -50,7 +53,23 @@ const AboutUsPage = () => {
           </div>
         </div>
       </div>
+
+      {/* section 3 */}
+     
     </Container>
+     <div className="bg-[#D3DFFA] text-center py-16 sm:py-24">
+     <Container>
+         <h2>Our Vision</h2>
+         <p className="md:w-[70%] md:mx-auto">
+         To be the go-to consulting firm for businesses seeking sustainable growth, innovative strategies, and a competitive edge in their industries.
+         </p>
+     </Container>
+    </div>
+
+    {/* contact */}
+    <ContactForm/>
+    </>
+
   );
 };
 

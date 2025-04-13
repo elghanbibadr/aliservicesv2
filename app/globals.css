@@ -8,6 +8,7 @@
   --color-lightBlue:#0123D7;
 --color-cyan:#D3DFFA;
 --color-lightGrey:#F4F4F4;
+--color-inputBg:#F2F1F1
 
 
 
@@ -44,6 +45,9 @@ p {
          my-4;
 }
 
+input,textarea,select{
+  @apply bg-inputBg text-base md:text-lg text-[#6B728066] rounded-[32px]
+}
 
 .small-desc{
   @apply text-[13px] md:text-[14px] text-text my-4 
