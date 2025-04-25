@@ -10,7 +10,7 @@ const AboutUsPage = () => {
     
     <Container>
       <div className="text-center my-20">
-        <h1>About Us – Alie Services</h1>
+        <h1>About Us </h1>
         <h4>Empowering Businesses for Sustainable Success</h4>
         <p className="md:w-[70%] mx-auto">
           At Alie Services, we are committed to helping businesses navigate

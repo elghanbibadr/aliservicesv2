@@ -63,7 +63,7 @@ h1 {
 }
 
 button{
-  @apply rounded-[20px] px-7 py-3
+  @apply rounded-[20px] px-7 py-3 cursor-pointer
 }
 
 .btn-transparent{

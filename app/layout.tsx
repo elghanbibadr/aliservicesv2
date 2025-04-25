@@ -29,7 +29,6 @@ export default function RootLayout({
           <Navbar />
         </Container>
         {children}
-        <Newsletter />
         <Footer />
       </body>
     </html>
