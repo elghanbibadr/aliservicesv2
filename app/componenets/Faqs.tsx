@@ -5,43 +5,9 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { MinusIcon, PlusIcon } from 'lucide-react';
 
-// Define the type for a single FAQ item
-interface FaqItem {
-  id: number;
-  question: string;
-  answer: string;
-}
 
-// Sample FAQ Data - Replace or fetch from your backend/CMS
-const faqData: FaqItem[] = [
-  {
-    id: 1,
-    question: 'How can I get started?',
-    answer: 'Getting started is easy! Simply contact us through our form or give us a call. We\'ll schedule an initial consultation to understand your needs and discuss how we can help your business grow.',
-  },
-  {
-    id: 2,
-    question: 'What are the pricing options?',
-    answer: 'We offer flexible pricing options tailored to the scope and complexity of your project. This can range from hourly rates for specific tasks to project-based fees or retainer agreements for ongoing support. We provide detailed quotes after the initial consultation.',
-  },
-  {
-    id: 3,
-    question: 'How does Alie Services work?',
-    answer: 'Alie Services works closely with you to understand your business goals and challenges. We conduct thorough analysis, develop customized strategies, and provide actionable recommendations. We believe in a collaborative approach, ensuring you\'re involved throughout the process.',
-  },
-  {
-    id: 4,
-    question: 'Is Alie Services secure?',
-    answer: 'Absolutely. We prioritize data security and confidentiality. We employ industry-standard security measures and protocols to protect your sensitive information. Non-disclosure agreements (NDAs) are available upon request.',
-  },
-  {
-    id: 5,
-    question: 'What services does Alie Services offer?',
-    answer: 'We offer a comprehensive suite of consulting services including business strategy development, market analysis, operational efficiency improvements, financial planning, funding acquisition support, and digital transformation guidance.',
-  },
-];
 
-const Faqs: React.FC = () => {
+const Faqs = ({faqsData}:{faqsData:any}) => {
   // State to track the currently open FAQ item index (null means none are open)
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -66,7 +32,7 @@ const Faqs: React.FC = () => {
 
         {/* FAQ Accordion List */}
         <div className="space-y-4 mb-12">
-          {faqData.map((item, index) => (
+          {faqsData.map((item, index) => (
             <div key={item.id} className="border border-gray-200 rounded-lg overflow-hidden">
               {/* Question Button */}
               <button

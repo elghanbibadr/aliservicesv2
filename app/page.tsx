@@ -4,7 +4,8 @@ import AboutUsSection from "./componenets/AboutUsSection";
 import ComprehensiveSolutions from "./componenets/ComprehensiveSolutions";
 import HomeBlogs from "./componenets/HomeBlogs";
 import Faqs from "./componenets/Faqs";
-import CallToAction from "./componenets/CallToAction";
+import { faqData } from "./data/data";
+
 
 
 
@@ -17,8 +18,7 @@ export default function Home() {
      <AboutUsSection/>
      <ComprehensiveSolutions/>
      <HomeBlogs/>
-     <Faqs/>
-     <CallToAction />
+     <Faqs faqsData={faqData} />
     </>
   
 

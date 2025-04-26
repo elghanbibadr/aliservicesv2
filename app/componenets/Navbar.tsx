@@ -14,7 +14,7 @@ function Navbar() {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Faq", href: "/faq" },
+    { label: "Faq", href: "/faqs" },
     { label: "Blog", href: "/blog" },
   ];
 

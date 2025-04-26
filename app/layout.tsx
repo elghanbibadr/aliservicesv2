@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 import Footer from "./componenets/ui/Footer";
-import Newsletter from "./componenets/NewsLetter";
 import Navbar from "./componenets/Navbar";
 import Container from "./componenets/ui/Container";
+import Faqs from "./componenets/Faqs";
+import { faqData } from "./data/data";
+import CallToAction from "./componenets/CallToAction";
 
 const IbmPlex = IBM_Plex_Sans_Arabic({
   subsets: ["latin"],
@@ -29,6 +31,8 @@ export default function RootLayout({
           <Navbar />
         </Container>
         {children}
+        {/* <Faqs faqsData={faqData} /> */}
+        <CallToAction/>
         <Footer />
       </body>
     </html>
