@@ -1,11 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use server'
 
 
-import { createClient } from '@/utils/supabase/client'
-import { EmailType } from '../admin/emails/columns';
 
 import { revalidatePath } from 'next/cache';
-export async function GetEmails(): Promise<EmailType[]> {
+import { createClient } from '../utils/supabase/server';
+export async function GetEmails() {
   const supabase = await createClient()
   const { data, error } = await supabase.from("Emails").select("*"); // Prevents caching
 
@@ -41,7 +41,7 @@ export async function deleteEmail(emailId:string) {
 
 
   
-export async function addEmail(newEmailData:EmailType) {
+export async function addEmail(newEmailData:any) {
     const supabase = await createClient()
   
      

@@ -33,7 +33,6 @@ const promises = [
 ];
 
 
-import Image from "next/image";
 interface PromiseCardProps {
   icon?: string;
   title: string;
@@ -41,7 +40,7 @@ interface PromiseCardProps {
   withImage?:boolean
 }
 
-export const PromiseCard: FC<PromiseCardProps> = ({ icon, title, description,withImage=false }) => {
+export const PromiseCard: FC<PromiseCardProps> = ({ title, description}) => {
   return (
     <div className="bg-white shadow-2xl rounded-3xl mt-6 p-5   ">
      {/* {withImage && <div className=" rounded-lg mb-4">

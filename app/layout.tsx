@@ -4,8 +4,7 @@ import "./globals.css";
 import Footer from "./componenets/ui/Footer";
 import Navbar from "./componenets/Navbar";
 import Container from "./componenets/ui/Container";
-import Faqs from "./componenets/Faqs";
-import { faqData } from "./data/data";
+
 import CallToAction from "./componenets/CallToAction";
 
 const IbmPlex = IBM_Plex_Sans_Arabic({

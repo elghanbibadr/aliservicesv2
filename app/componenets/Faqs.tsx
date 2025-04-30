@@ -32,7 +32,7 @@ const Faqs = ({faqsData}:{faqsData:any}) => {
 
         {/* FAQ Accordion List */}
         <div className="space-y-4 mb-12">
-          {faqsData.map((item, index) => (
+          {faqsData.map((item:any, index:number) => (
             <div key={item.id} className="border border-gray-200 rounded-lg overflow-hidden">
               {/* Question Button */}
               <button

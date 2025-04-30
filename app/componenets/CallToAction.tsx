@@ -19,8 +19,8 @@ const CallToAction = () => {
               Take the next step in your business growth journey
             </h1>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Unlock your business's full potential with expert strategies
-              and tailored solutions, let's discuss how we can optimize your operations
+              Unlock your business full potential with expert strategies
+              and tailored solutions, lets discuss how we can optimize your operations
               and drive sustainable growth.
             </p>
             {/* Call to Action Button */}

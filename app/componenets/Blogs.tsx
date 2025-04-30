@@ -64,7 +64,7 @@ export default function BlogCards({ blogs }: { blogs: BlogPost[] }) {
         {filteredBlogs.length > 0 ? (
           filteredBlogs.map((blog, index) => (
             <Link key={index} 
-            href={blog.blogUrl ? blog.blogUrl : `/ressources/${blog.slug.current}`}            >
+            href={blog.blogUrl ? blog.blogUrl : `/blog/${blog.slug.current}`}            >
               <BlogCard blog={blog} />
             </Link>
           ))
