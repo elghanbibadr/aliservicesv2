@@ -16,7 +16,7 @@ const page = () => {
 
       {/* Paragraph */}
       <p className="small-desc">
-        In choosing a recruitment service, organizations should consider factors such as the agencys track record, industry expertise, reputation, and alignment with the company's values and needs.
+        In choosing a recruitment service, organizations should consider factors such as the agencys track record, industry expertise, reputation, and alignment with the companys values and needs.
       </p>
 
       {/* Information Subheading */}

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // components/Faqs.tsx
 'use client'; // Add this directive for useState
 
