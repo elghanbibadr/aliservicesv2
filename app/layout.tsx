@@ -6,6 +6,9 @@ import Navbar from "./componenets/Navbar";
 import Container from "./componenets/ui/Container";
 
 import CallToAction from "./componenets/CallToAction";
+import { ClerkProvider } from "@clerk/nextjs";
+import ConditionalNavbar from "./componenets/ConditionalNavbar";
+import ConditionalFooterAndCta from "./componenets/ConditionalFooterAndCta";
 
 const IbmPlex = IBM_Plex_Sans_Arabic({
   subsets: ["latin"],
@@ -24,16 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${IbmPlex.className}  antialiased`}>
-        <Container>
-          <Navbar />
-        </Container>
-        {children}
-        {/* <Faqs faqsData={faqData} /> */}
-        <CallToAction/>
-        <Footer />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${IbmPlex.className}  antialiased`}>
+         <ConditionalNavbar />
+          {children}
+          {/* <Faqs faqsData={faqData} /> */}
+        <ConditionalFooterAndCta/>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
