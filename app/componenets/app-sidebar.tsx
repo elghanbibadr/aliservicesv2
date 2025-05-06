@@ -12,13 +12,13 @@ import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } fr
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar className="bg-secondaryblack gap-0" {...props}>
-      <SidebarHeader className="bg-secondaryblack h-fit">
+      <SidebarHeader className="bg-secondaryblack">
         <Image
           className="mx-auto"
           src={logoIcon}
           alt="logo"
-          height={70}
-          width={70}
+          height={140}
+          width={140}
         />
       </SidebarHeader>
       <SidebarContent className="gap-0 bg-secondaryblack">

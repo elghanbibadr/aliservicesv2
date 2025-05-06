@@ -9,6 +9,10 @@ export async function GetEmails() {
   const supabase = await createClient()
   const { data, error } = await supabase.from("Emails").select("*"); // Prevents caching
 
+
+  console.log("supabase",supabase)
+
+  console.log("data",data)
   if (error) {
     console.error("Error fetching emails:", error);
     return [];

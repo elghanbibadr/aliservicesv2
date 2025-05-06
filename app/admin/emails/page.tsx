@@ -9,7 +9,6 @@ import { columns } from "./columns"
 export default async function EmailsPage() {
   const data =await GetEmails()
 
-  console.log('data emails',data)
 
 
 

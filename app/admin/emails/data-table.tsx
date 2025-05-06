@@ -39,7 +39,7 @@ export function DataTable<TData, TValue>({
               {headerGroup.headers.map((header) => {
                 return (
                   <TableHead
-                    className="p-4 py-6 text-secondaryblack"
+                    className="p-4 py-6 text-secondaryblack text-sm"
                     key={header.id}
                   >
                     {header.isPlaceholder
@@ -63,7 +63,7 @@ export function DataTable<TData, TValue>({
                 data-state={row.getIsSelected() && "selected"}
               >
                 {row.getVisibleCells().map((cell) => (
-                  <TableCell className="p-4 text-xl" key={cell.id}>
+                  <TableCell className="p-4 text-sm" key={cell.id}>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </TableCell>
                 ))}
