@@ -69,7 +69,7 @@ function Map() {
 
 
     setMap(mapInstance);
-  }, [locations]); // Dependency array includes locations if they might change
+  }, []); // Dependency array includes locations if they might change
 
   const onUnmount = useCallback(function callback(map:any) {
     setMap(null);

@@ -16,7 +16,7 @@ export default function ContactForm() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState<string | null>(null);
+  const [success, setSuccess] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
   const businessTypes = [
@@ -42,7 +42,7 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setSuccess(null);
+    // setSuccess(null);
     setError(null);
 
     try {
@@ -55,7 +55,7 @@ export default function ContactForm() {
       const result = await response.json();
 
       if (result.success) {
-        setSuccess("Message sent successfully! We'll get back to you soon.");
+        setSuccess(true);
         setFormData({ fullName: "", email: "", phone: "", businessType: "", message: "" });
       } else {
         setError("Something went wrong. Please try again.");
@@ -74,7 +74,7 @@ export default function ContactForm() {
   useEffect(() => {
     if (success) {
       const timer = setTimeout(() => {
-        setSuccess(null);
+        setSuccess(false);
       }, 4000); // Hide success message after 4 seconds
 
       return () => clearTimeout(timer); // Cleanup timeout on component unmount
@@ -154,8 +154,8 @@ export default function ContactForm() {
                 </button>
               </form>
               {/* Success/Error Messages */}
-              {success && <span className="text-green-400 text-xl block  mt-5">{success}</span>}
-              {error && <span className="text-red-400 text-xl block mt-5">{error}</span>}
+              {success && <span className="!text-white h-10 bg-green-400 py-2 text-center  text-sm block  mt-5">Message sent successfully! We ll get back to you soon                </span>}
+              {error && <span className="text-red-400 text-xl block mt-5">Something went wrong</span>}
             </div>
           </div>
         </section>

@@ -6,6 +6,7 @@ import blogPlaceHolder1 from "@/public/blogPlaceholder1.png"
 import blogPlaceHolder2 from "@/public/blogPlaceHolder2.png"
 import {  ArrowRight } from 'lucide-react';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+import { getBlogs } from '../lib/sanity';
 
 // Define the type for a single blog post
 interface BlogPost {
@@ -18,49 +19,14 @@ interface BlogPost {
   excerpt: string;
 }
 
-// Sample data - Replace with your actual blog data fetching logic (e.g., from an API or CMS)
-const blogPostsData: BlogPost[] = [
-  {
-    id: 1,
-    slug: 'blog-post-one',
-    imageUrl: blogPlaceHolder1, // Replace with your image path
-    category: 'UI/UX',
-    readTime: '5 min read',
-    title: 'Blog title heading will go here',
-    excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.',
-  },
-  {
-    id: 2,
-    slug: 'blog-post-two',
-    imageUrl: blogPlaceHolder1, // Replace with your image path
-    category: 'Development',
-    readTime: '5 min read',
-    title: 'Another interesting blog title goes here',
-    excerpt: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-  },
-   {
-    id: 3,
-    slug: 'blog-post-three',
-    imageUrl: blogPlaceHolder2, // Replace with your image path
-    category: 'Marketing',
-    readTime: '7 min read',
-    title: 'Strategies for effective content marketing',
-    excerpt: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-  },
-   {
-    id: 4,
-    slug: 'blog-post-four',
-    imageUrl: blogPlaceHolder2, // Replace with your image path
-    category: 'Funding',
-    readTime: '6 min read',
-    title: 'Navigating startup funding opportunities',
-    excerpt: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-  },
-  // Add more posts as needed
-];
 
 
-const HomeBlogs: React.FC = () => {
+
+const HomeBlogs: React.FC = async () => {
+
+    const blogs = await getBlogs();
+
+  
   return (
     <section className="bg-white py-16 sm:py-24">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -76,9 +42,9 @@ const HomeBlogs: React.FC = () => {
 
         {/* Blog Post Grid */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-10">
-          {blogPostsData.map((post) => (
+          {blogs?.map((post,index) => (
             <article
-              key={post.id}
+              key={index}
               className="flex flex-col sm:flex-row bg-white rounded-xl shadow-md overflow-hidden transition duration-300 ease-in-out hover:shadow-lg"
             >
               {/* Image Section */}
@@ -102,29 +68,25 @@ const HomeBlogs: React.FC = () => {
                       {post.category}
                     </span>
                     <span className="text-[14px] text-black font-bold">
-                      {post.readTime}
+                      5min
                     </span>
                   </div>
 
                   {/* Title */}
                   <h3 className="!font-semibold !my-4">
-                    {/* <Link href={`/blog/${post.slug}`} passHref>
-                      <a className="hover:text-blue-700 transition duration-150 ease-in-out">
-                        {post.title}
-                      </a>
-                    </Link> */}
+
                     {post.title}
                   </h3>
 
                   {/* Excerpt */}
-                  <span className="small-desc"> {/* Limits text to 3 lines */}
-                    {post.excerpt}
+                  <span className="small-desc line-clamp-3"> {/* Limits text to 3 lines */}
+                    {post.description}
                   </span>
                 </div>
 
                 {/* Read More Link */}
                 <div className="mt-4">
-                  <Link href={`/blog/${post.slug}`} >
+                  <Link href={`/blog/${post.slug.current}`} >
                     <span className="flex t text-lightBlue items-center gap-2">
                       <span className='text-[15px]'>Read more</span>
                       <ArrowRight className='h-3 text-lightBlue w-6'/>
@@ -136,14 +98,6 @@ const HomeBlogs: React.FC = () => {
           ))}
         </div>
 
-        {/* Optional: Add a "View All Posts" button here */}
-        {/* <div className="mt-12 text-center">
-          <Link href="/blog" passHref>
-             <a className="inline-block px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-md hover:bg-gray-50 transition duration-150 ease-in-out">
-               View All Posts
-             </a>
-          </Link>
-        </div> */}
 
       </div>
     </section>

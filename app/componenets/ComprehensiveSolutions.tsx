@@ -4,6 +4,7 @@ import solutionIcon1 from "@/public/solutionIcon1.svg"
 import solutionIcon2 from "@/public/solutionIcon2.svg"
 import solutionIcon3 from "@/public/solutionIcon3.svg"
 import Image from 'next/image';
+import Link from 'next/link';
 
 const solutionsData = [
   {
@@ -53,10 +54,7 @@ const ComprehensiveSolutions = () => {
               key={index}
               className="bg-white rounded-xl shadow-lg p-6 lg:p-8 flex flex-col transition duration-300 ease-in-out hover:shadow-xl" // Added hover effect
             >
-              {/* Icon */}
-              {/* <div className={`w-12 h-12 rounded-lg ${solution.bgColor} flex items-center justify-center mb-6`}>
-                <solution.icon className={`h-6 w-6 ${solution.iconColor}`} aria-hidden="true" />
-              </div> */}
+    
               <Image className='mb-6' src={solution.icon} height={60} width={60} alt="solution icon" />
 
               {/* Title */}
@@ -71,11 +69,13 @@ const ComprehensiveSolutions = () => {
 
               {/* Learn More Button */}
               <div className="mt-auto"> {/* Pushes button to bottom */}
-                <button
-                  className="btn-transparent"
-                >
-                  Learn More
-                </button>
+                <Link target='_blank' href="https://calendly.com/alieservices/free-consultation">
+                  <button
+                    className="btn-transparent"
+                  >
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

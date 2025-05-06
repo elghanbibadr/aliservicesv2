@@ -8,18 +8,21 @@ import logoIcon from "@/public/logo.svg";
 import { SignOutButton } from "@clerk/nextjs";
 import Image from "next/image";
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from "./ui/sidebar";
+import Link from "next/link";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar className="bg-secondaryblack gap-0" {...props}>
       <SidebarHeader className="bg-secondaryblack">
-        <Image
-          className="mx-auto"
-          src={logoIcon}
-          alt="logo"
-          height={140}
-          width={140}
-        />
+        <Link href="/">
+          <Image
+            className="mx-auto cursor-pointer"
+            src={logoIcon}
+            alt="logo"
+            height={140}
+            width={140}
+          />
+        </Link>
       </SidebarHeader>
       <SidebarContent className="gap-0 bg-secondaryblack">
         {/* We create a collapsible SidebarGroup for each parent. */}

@@ -83,7 +83,7 @@ const Faqs = ({faqsData}:{faqsData:any}) => {
 
         {/* Bottom Buttons */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Link href="/learn-more" passHref>
+            <Link href="/https://calendly.com/alieservices/free-consultation" passHref>
                <button className="btn-transparent">
                  Learn More
                </button>

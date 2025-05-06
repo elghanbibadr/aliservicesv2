@@ -4,6 +4,7 @@ import React from 'react';
 // IoPowerOutline is a common choice from react-icons/io5
 import Turnonicon from '@/public/Turnonicon.svg'
 import Container from './ui/Container';
+import Link from 'next/link';
 const CallToAction = () => {
   return (
     // Section container with light blue background and padding
@@ -24,12 +25,14 @@ const CallToAction = () => {
               and drive sustainable growth.
             </p>
             {/* Call to Action Button */}
-            <button
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg px-8 py-3 rounded-full transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-blue-50"
-              aria-label="Book your consultation"
-            >
-              Book your consultation
-            </button>
+            <Link target='_blank' href="https://calendly.com/alieservices/free-consultation">
+              <button
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg px-8 py-3 rounded-full transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-blue-50"
+                aria-label="Book your consultation"
+              >
+                Book your consultation
+              </button>
+            </Link>
           </div>
 
           {/* Image/Icon Area */}

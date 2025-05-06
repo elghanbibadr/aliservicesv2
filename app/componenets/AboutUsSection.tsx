@@ -3,6 +3,7 @@ import Image from 'next/image';
 import aboutUsBg from '@/public/aboutUsBg.png'
 import Container from './ui/Container';
 import { CircleCheck } from 'lucide-react';
+import Link from 'next/link';
 
 const AboutUsSection = () => {
 
@@ -17,7 +18,7 @@ const AboutUsSection = () => {
 
           {/* Text Content Column */}
           <div className="w-full lg:w-1/2">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+            <h2 className=" font-bold tracking-tight text-gray-900  mb-6">
               About Us
             </h2>
             <p >
@@ -44,16 +45,20 @@ const AboutUsSection = () => {
               </li>
             </ul>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                className="btn-transparent"
-              >
-                Learn More
-              </button>
-              <button
-                className="btn-blue"
-              >
-                Contact Us
-              </button>
+              <Link target='_blank' href="https://calendly.com/alieservices/free-consultation">
+                <button
+                  className="btn-transparent"
+                >
+                  Learn More
+                </button>
+              </Link>
+              <Link href="/contact">
+                <button
+                  className="btn-blue"
+                >
+                  Contact Us
+                </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -24,10 +24,10 @@ const navLinks2 = [
 ];
 
 const socialIcons = [
-  { src: twitterIcon, alt: 'Twitter' },
-  { src: instagramIcon, alt: 'Instagram' },
-  { src: facebookIcon, alt: 'Facebook' },
-  { src: linkedinIcon, alt: 'LinkedIn' },
+  { src: twitterIcon, alt: 'Twitter' , href:"https://www.tiktok.com/@alie.services" },
+  { src: instagramIcon, alt: 'Instagram',href:"https://www.instagram.com/alie.services/" },
+  { src: facebookIcon, alt: 'Facebook' ,href:"https://www.facebook.com/people/Alie-Services/61571814239161/" },
+  { src: linkedinIcon, alt: 'LinkedIn',href:"https://www.linkedin.com/company/alieservices/" },
 ];
 
 const linkClass = "text-base text-white hover:text-white transition-colors duration-150";
@@ -98,10 +98,12 @@ const Footer: React.FC = () => {
               Connect With Us
             </span>
             <div className="flex space-x-5">
-              {socialIcons.map(({ src, alt }, index) => (
-                <span key={index} className="hover:opacity-80 transition duration-150">
-                  <Image src={src} alt={alt} width={25} height={25} />
-                </span>
+              {socialIcons.map(({ src, alt,href }, index) => (
+                <Link key={index} href={href}>
+                  <span key={index} className="hover:opacity-80 transition duration-150">
+                    <Image src={src} alt={alt} width={25} height={25} />
+                  </span>
+                </Link>
               ))}
             </div>
           </div>

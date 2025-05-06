@@ -3,6 +3,7 @@ import Container from "../componenets/ui/Container";
 import ourMission from "@/public/ourMission.svg";
 import Image from "next/image";
 import ContactForm from "../componenets/ContactForm";
+import Link from "next/link";
 
 const AboutUsPage = () => {
   return (
@@ -22,8 +23,8 @@ const AboutUsPage = () => {
           efficiently and confidently.
         </p>
         <div className="flex gap-3 items-center mx-auto w-fit mt-8">
-          <button className="btn-blue">Get Started</button>
-          <button className="btn-transparent">Contact Us</button>
+          <Link target="_blank" href="https://calendly.com/alieservices/free-consultation"><button className="btn-blue">Get Started</button></Link>
+          <Link href="/contact"><button className="btn-transparent">Contact Us</button></Link>
         </div>
       </div>
       {/* ection 2 */}

@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
-import Footer from "./componenets/ui/Footer";
-import Navbar from "./componenets/Navbar";
-import Container from "./componenets/ui/Container";
 
-import CallToAction from "./componenets/CallToAction";
+
 import { ClerkProvider } from "@clerk/nextjs";
 import ConditionalNavbar from "./componenets/ConditionalNavbar";
 import ConditionalFooterAndCta from "./componenets/ConditionalFooterAndCta";
