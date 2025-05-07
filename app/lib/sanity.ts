@@ -1,5 +1,4 @@
 import { createClient } from 'next-sanity';
-import { Timestamp } from 'next/dist/server/lib/cache-handlers/types';
 
 export const sanityClient = createClient({
   projectId: 'vvvu3q4c', // Replace with your actual Project ID
@@ -17,7 +16,7 @@ export interface BlogPost {
     current: string;
     _type: "slug";
   };
-  date:Timestamp
+  date: string; // Represents an ISO 8601 date string
 }
 
 

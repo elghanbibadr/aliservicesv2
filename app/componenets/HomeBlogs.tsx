@@ -2,22 +2,9 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link'; // Use Next.js Link for internal navigation
-import blogPlaceHolder1 from "@/public/blogPlaceholder1.png"
-import blogPlaceHolder2 from "@/public/blogPlaceHolder2.png"
-import {  ArrowRight } from 'lucide-react';
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
-import { getBlogs } from '../lib/sanity';
 
-// Define the type for a single blog post
-interface BlogPost {
-  id: string | number; // Unique identifier
-  slug: string; // URL slug for the post
-  imageUrl:string | StaticImport ;
-  category: string;
-  readTime: string; // e.g., "5 min read"
-  title: string;
-  excerpt: string;
-}
+import {  ArrowRight } from 'lucide-react';
+import { getBlogs } from '../lib/sanity';
 
 
 
