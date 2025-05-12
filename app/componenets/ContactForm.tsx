@@ -52,7 +52,11 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       });
 
+
+      console.log("res",response)
       const result = await response.json();
+
+      console.log("result",result)
 
       if (result.success) {
         setSuccess(true);
