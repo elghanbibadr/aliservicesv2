@@ -27,7 +27,7 @@ const Faqs = ({faqsData}:{faqsData:any}) => {
             FAQs
           </h2>
           <p className="mt-3 text-lg text-gray-600">
-            Find answers to commonly asked questions about Alie Services and its services.
+            Find answers to commonly asked questions about Alie Services and it&apos;s services.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ const Faqs = ({faqsData}:{faqsData:any}) => {
 
         {/* Bottom Buttons */}
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Link href="/https://calendly.com/alieservices/free-consultation" passHref>
+            <Link href="https://calendly.com/alieservices/free-consultation" passHref>
                <button className="btn-transparent">
                  Learn More
                </button>

@@ -87,7 +87,7 @@ export default function ContactForm() {
             {/* Left Side - Testimonial Image */}
         
             {/* Right Side - Contact Form */}
-            <div className="p-4  text-center">
+            <div className=" text-center">
               <h2 >Contact Us</h2>
               <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin consectetur justo quis

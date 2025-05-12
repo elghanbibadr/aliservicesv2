@@ -8,11 +8,11 @@ const page = () => {
   return (
     <Container>
       <div className="md:grid md:grid-cols-3">
-      <div>
+      <div className="p-4">
       {/* Heading */}
-      <h4>
+      <h3>
         Get In Touch With Alie Services Consultation Experts
-      </h4>
+      </h3>
 
       {/* Paragraph */}
       <p className="small-desc">
@@ -20,7 +20,7 @@ const page = () => {
       </p>
 
       {/* Information Subheading */}
-      <h6 className="text-lg text-heading font-medium">
+      <h6 className="text-lg text-heading mb-4 font-medium">
         Our information
       </h6>
 
@@ -34,19 +34,19 @@ const page = () => {
             aria-hidden="true"
           />
           {/* Container for both addresses - using grid for potential side-by-side on wider screens */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6  !text-sm leading-snug">
+          <div className="">
              {/* Address 1 */}
-             <div>
-                <span className="block">8 The Green #8783,</span>
-                <span  className="block">Dover, Delaware, 19901</span>
-                <span  className="block">USA</span>
+             <div className="">
+                <span className="block text-sm">8 The Green #8783,</span>
+                <span  className="block text-sm">Dover, Delaware, 19901</span>
+                <span  className="block text-sm">USA</span>
              </div>
              {/* Address 2 */}
              <div>
-                <span className="block">77 City Centre Drive,</span>
-                <span className="block">East Tower, Suite 501</span>
-                <span className="block">Mississauga, Ontario,</span>
-                <span className="block">L5B1M5, Canada</span>
+                <span className="block text-sm">77 City Centre Drive,</span>
+                <span className="block text-sm">East Tower, Suite 501</span>
+                <span className="block text-sm">Mississauga, Ontario,</span>
+                <span className="block text-sm">L5B1M5, Canada</span>
              </div>
           </div>
         </div>

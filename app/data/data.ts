@@ -9,8 +9,8 @@ interface FaqItem {
 export const faqData: FaqItem[] = [
   {
     id: 1,
-    question: 'How can I get started?',
-    answer: 'Getting started is easy! Simply contact us through our form or give us a call. We\'ll schedule an initial consultation to understand your needs and discuss how we can help your business grow.',
+    question: 'What services does Alie Services offer?',
+    answer: 'We specialize in business optimization, process automation, workflow efficiency, and digital transformation solutions—customized to your business needs.',
   },
   {
     id: 2,
@@ -39,8 +39,8 @@ export const faqData: FaqItem[] = [
 export const allFaqs: FaqItem[] = [
     {
       id: 1,
-      question: 'How can I get started?',
-      answer: 'Getting started is easy! Simply contact us through our form or give us a call. We\'ll schedule an initial consultation to understand your needs and discuss how we can help your business grow.',
+      question: 'What services does Alie Services offer?',
+      answer: 'We specialize in business optimization, process automation, workflow efficiency, and digital transformation solutions—customized to your business needs.',
     },
     {
       id: 2,

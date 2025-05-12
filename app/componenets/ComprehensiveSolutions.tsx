@@ -69,7 +69,7 @@ const ComprehensiveSolutions = () => {
 
               {/* Learn More Button */}
               <div className="mt-auto"> {/* Pushes button to bottom */}
-                <Link target='_blank' href="https://calendly.com/alieservices/free-consultation">
+                <Link target='_blank' href="/services">
                   <button
                     className="btn-transparent"
                   >

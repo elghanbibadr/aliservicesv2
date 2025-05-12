@@ -42,7 +42,7 @@ p {
 }
 
 input,textarea,select{
-  @apply bg-inputBg text-base md:text-lg text-[#6B728066] rounded-[32px]
+  @apply bg-inputBg text-base  text-[#6B728066] rounded-[32px]
 }
 
 .small-desc{
