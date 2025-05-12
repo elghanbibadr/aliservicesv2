@@ -6,9 +6,7 @@ const isProtectedRoute = createRouteMatcher(['/admin(.*)']);
 
 export default clerkMiddleware(async (auth, req: NextRequest) => {
   const hostname = req.nextUrl.hostname;
-  const isMaintenance =true;
-  const productionDomain = "www.alieservices.com"; // Change this to your actual domain
-
+  
   // Protect admin routes with Clerk
   if (isProtectedRoute(req)) {
     await auth.protect();
@@ -16,10 +14,7 @@ export default clerkMiddleware(async (auth, req: NextRequest) => {
 
   console.log("hostname",hostname)
 
-  // Redirect to maintenance page only on the production domain
-  if (isMaintenance && productionDomain===hostname && !req.nextUrl.pathname.startsWith("/maintenance")) {
-    return NextResponse.redirect(new URL("/maintenance", req.url));
-  }
+
 
   return NextResponse.next();
 });
