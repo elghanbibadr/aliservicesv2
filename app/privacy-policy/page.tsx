@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
       <section className="mb-8">
         <h3 className="">Introduction</h3>
         <p className="text-gray-700 leading-relaxed">
-          This Privacy Policy describes how Alie Services ("we", "our", or "us") collects, uses, and protects your personal information when you use our website and services.
+          This Privacy Policy describes how Alie Services (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) collects, uses, and protects your personal information when you use our website and services.
         </p>
       </section>
 
@@ -44,7 +44,7 @@ export default function PrivacyPolicyPage() {
       <section className="mb-8">
         <h3 className="">SMS Communications Consent</h3>
         <p className="text-gray-700 leading-relaxed">
-          By providing your phone number and submitting a request on our website, you consent to receive SMS messages from Alie Services regarding your inquiry, appointments, or related business services. Message frequency may vary. Reply <strong>'STOP'</strong> to unsubscribe at any time.
+          By providing your phone number and submitting a request on our website, you consent to receive SMS messages from Alie Services regarding your inquiry, appointments, or related business services. Message frequency may vary. Reply <strong>&apos;STOP&apos;</strong> to unsubscribe at any time.
         </p>
       </section>
 
@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
           <li>Correct inaccurate information</li>
           <li>Request deletion of your information</li>
           <li>Opt-out of marketing communications</li>
-          <li>Opt-out of SMS communications by replying <strong>'STOP'</strong></li>
+          <li>Opt-out of SMS communications by replying <strong>&apos;STOP&apos;</strong></li>
         </ul>
       </section>
 
