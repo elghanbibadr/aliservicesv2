@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // File: app/api/your-route-name/route.ts (or wherever your Resend test POST route is)
 import { Resend } from 'resend';
 
@@ -9,10 +10,6 @@ console.log(
   apiKey ? apiKey.substring(0, 5) + "..." + apiKey.substring(apiKey.length - 5) : "API KEY NOT FOUND/SET"
 );
 
-if (!apiKey) {
-  console.error("Resend Route: FATAL - RESEND_API_KEY is not set in the environment.");
-  return Response.json({ error: { message: "Server configuration error: RESEND_API_KEY missing." } }, { status: 500 });
-}
 
 const resend = new Resend(apiKey);
 
@@ -30,7 +27,7 @@ export async function POST() {
 
     if (error) {
       console.error("Resend Route: resend.emails.send returned an error:", JSON.stringify(error, null, 2));
-      return Response.json({ error }, { status: error.statusCode || 500 }); // Use error's statusCode if available
+      return Response.json({ error }, { status:  500 }); // Use error's statusCode if available
     }
 
     console.log("Resend Route: resend.emails.send was successful. Data:", JSON.stringify(data, null, 2));
