@@ -6,7 +6,7 @@ import Link from 'next/link';
 import logo from '@/public/logoWhite.svg';
 import facebookIcon from '@/public/facebook.svg';
 import linkedinIcon from '@/public/linkedin.svg';
-import twitterIcon from '@/public/Twitter.svg';
+import tiktokIcon from '@/public/tiktok.svg';
 import instagramIcon from '@/public/instagram.svg';
 
 import Container from './Container';
@@ -24,7 +24,7 @@ const navLinks2 = [
 ];
 
 const socialIcons = [
-  { src: twitterIcon, alt: 'Twitter' , href:"https://www.tiktok.com/@alie.services" },
+  { src: tiktokIcon, alt: 'Twitter' , href:"https://www.tiktok.com/@alie.services" },
   { src: instagramIcon, alt: 'Instagram',href:"https://www.instagram.com/alie.services/" },
   { src: facebookIcon, alt: 'Facebook' ,href:"https://www.facebook.com/people/Alie-Services/61571814239161/" },
   { src: linkedinIcon, alt: 'LinkedIn',href:"https://www.linkedin.com/company/alieservices/" },
