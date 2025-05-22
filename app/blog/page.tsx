@@ -29,6 +29,7 @@ const promises = [
 
 const page = async () => {
   const blogs = await getBlogs();
+  
 
   console.log("blogs",blogs)
 
