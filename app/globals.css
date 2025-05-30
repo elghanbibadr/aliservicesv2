@@ -179,3 +179,8 @@ button{
   body {
     @apply bg-background text-foreground;}}
 
+
+
+    .cl-internal-27wqok{
+      display: none !important;
+    }
